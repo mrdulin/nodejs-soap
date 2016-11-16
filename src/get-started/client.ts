@@ -3,7 +3,7 @@ import faker from 'faker';
 
 import { config } from '../config';
 
-const url = `http://localhost:${config.PORT}/get-started?wsdl`;
+const url = `http://${config.HOST}:${config.PORT}/get-started?wsdl`;
 
 soap.createClient(url, (createClientError, client: soap.Client) => {
   if (createClientError) {

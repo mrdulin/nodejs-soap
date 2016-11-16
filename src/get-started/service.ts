@@ -1,6 +1,5 @@
-import fs from 'fs';
-import path from 'path';
 import faker from 'faker';
+import { readWSDL } from '../util';
 
 const service = {
   UserService: {
@@ -13,6 +12,6 @@ const service = {
   }
 };
 
-const wsdl = fs.readFileSync(path.resolve(__dirname, './service.wsdl'), 'utf8');
+const wsdl = readWSDL('get-started.wsdl');
 
 export { service, wsdl };
