@@ -16,3 +16,5 @@ Learning soap, wsdl, node.js
 
 - https://www.w3.org/TR/2001/NOTE-wsdl-20010315#_ports
 - https://www.soapui.org/
+- https://www.ianlewis.org/en/returning_arrays_in_wsdl
+- http://leninkumarkoppoju.blogspot.com/2012/09/wsdl-with-multiple-operations.html
