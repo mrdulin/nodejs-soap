@@ -36,11 +36,11 @@ async function createServer(): Promise<http.Server> {
       }
       console.log(`Http server is listening on ${address}`);
       const soapServer = soap.listen(app, '/get-started', service, wsdl);
-      soapServer.log = function(type, data) {
-        console.log('soap server log');
-        console.log('type: ', type);
-        console.log('data: ', data);
-      };
+      // soapServer.log = function(type, data) {
+      //   console.log('soap server log');
+      //   console.log('type: ', type);
+      //   console.log('data: ', data);
+      // };
       resolve(server);
     });
   });

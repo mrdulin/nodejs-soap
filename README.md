@@ -4,8 +4,6 @@ Learning soap, wsdl, node.js
 
 ## TODO
 
-- [ ] https://stackoverflow.com/questions/51528245/nodejs-proper-request-soap
-- [ ] https://stackoverflow.com/questions/32480481/creating-a-soap-webservice-with-node-soap
 - [ ] https://stackoverflow.com/questions/41977246/how-to-make-http-request-from-xml-soap
 - [ ] https://stackoverflow.com/questions/42686370/soap-request-using-nodejs
 - [ ] https://stackoverflow.com/questions/45594547/parsing-with-xml2js
