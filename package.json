@@ -1,0 +1,35 @@
+{
+  "name": "nodejs-soap",
+  "version": "1.0.0",
+  "description": "Learning soap, wsdl, node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrdulin/nodejs-soap.git"
+  },
+  "keywords": [],
+  "author": "mrdulin <novaline.dulin@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mrdulin/nodejs-soap/issues"
+  },
+  "homepage": "https://github.com/mrdulin/nodejs-soap#readme",
+  "devDependencies": {
+    "@types/body-parser": "^1.17.0",
+    "@types/express": "^4.16.1",
+    "@types/faker": "^4.1.5",
+    "@types/node": "^11.11.0",
+    "faker": "^4.1.0",
+    "ts-node": "^8.0.3",
+    "tslint": "^5.13.1",
+    "typescript": "^3.3.3333"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "soap": "^0.26.0"
+  }
+}
