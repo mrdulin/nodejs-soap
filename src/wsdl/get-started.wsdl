@@ -1,7 +1,7 @@
-<definitions name="Service" targetNamespace="http://localhost:8001/get-started/service.wsdl" 
+<definitions name="Service" targetNamespace="http://localhost:8001/get-started/get-started.wsdl" 
   xmlns="http://schemas.xmlsoap.org/wsdl/" 
   xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
-  xmlns:tns="http://localhost:8001/get-started/service.wsdl" 
+  xmlns:tns="http://localhost:8001/get-started/get-started.wsdl" 
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
   <message name="GetUserByIdInput">
@@ -14,21 +14,48 @@
     <part name="email" type="xsd:string"></part>
   </message>
 
+  <message name="GetUserByEmailInput">
+    <part name="email" type="xsd:string"></part>
+  </message>
+
+  <message name="GetUserByEmailOutput">
+    <part name="id" type="xsd:string"></part>
+    <part name="name" type="xsd:string"></part>
+    <part name="email" type="xsd:string"></part>
+  </message>
+
   <portType name="ServicePortType">
     <operation name="getUserById">
       <input message="tns:GetUserByIdInput"/>
       <output message="tns:GetUserByIdOutput"></output>
     </operation>
+    <operation name="getUserByEmail">
+      <input message="tns:GetUserByEmailInput"/>
+      <output message="tns:GetUserByEmailOutput"></output>
+    </operation>
   </portType>
 
   <binding name="ServiceSoapBinding" type="tns:ServicePortType">
     <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+
     <operation name="getUserById">
       <soap:operation soapAction="getUserById"/>
       <input message="tns:GetUserByIdInput">
         <soap:body parts="id" use="literal"/>
       </input>
       <output message="tns:GetUserByIdOutput">
+        <soap:body parts="id" use="literal"/>
+        <soap:body parts="name" use="literal"/>
+        <soap:body parts="email" use="literal"/>
+      </output>
+    </operation>
+
+    <operation name="getUserByEmail">
+      <soap:operation soapAction="getUserByEmail"/>
+      <input message="tns:GetUserByEmailInput">
+        <soap:body parts="email" use="literal"/>
+      </input>
+      <output message="tns:GetUserByEmailOutput">
         <soap:body parts="id" use="literal"/>
         <soap:body parts="name" use="literal"/>
         <soap:body parts="email" use="literal"/>

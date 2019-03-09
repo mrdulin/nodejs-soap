@@ -10,6 +10,7 @@ Learning soap, wsdl, node.js
 - [ ] https://stackoverflow.com/questions/41341969/nodejs-soap-request-response
 - [ ] https://stackoverflow.com/questions/42782261/nodejs-hapijs-parsing-xml
 - [ ] https://stackoverflow.com/questions/29990957/javascript-soap-response-parse-elements
+- [ ] https://stackoverflow.com/questions/5975134/wsdl-array-of-objects
 
 ## references
 
