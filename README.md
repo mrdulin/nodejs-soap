@@ -4,8 +4,6 @@ Learning soap, wsdl, node.js
 
 ## TODO
 
-- [ ] https://stackoverflow.com/questions/42686370/soap-request-using-nodejs
-- [ ] https://stackoverflow.com/questions/45594547/parsing-with-xml2js
 - [ ] https://stackoverflow.com/questions/37841520/how-to-parse-xml-soap-response-using-javascript
 - [ ] https://stackoverflow.com/questions/41341969/nodejs-soap-request-response
 - [ ] https://stackoverflow.com/questions/42782261/nodejs-hapijs-parsing-xml
@@ -18,3 +16,6 @@ Learning soap, wsdl, node.js
 - https://www.soapui.org/
 - https://www.ianlewis.org/en/returning_arrays_in_wsdl
 - http://leninkumarkoppoju.blogspot.com/2012/09/wsdl-with-multiple-operations.html
+- https://github.com/vpulim/node-soap
+- https://www.w3schools.com/xml/xml_soap.asp
+- https://www.ibm.com/developerworks/library/ws-usagewsdl/index.html

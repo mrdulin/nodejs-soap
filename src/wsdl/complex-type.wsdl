@@ -1,0 +1,64 @@
+<definitions name="Service" targetNamespace="http://localhost:8001/complex-type" 
+  xmlns="http://schemas.xmlsoap.org/wsdl/" 
+  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+  xmlns:tns="http://localhost:8001/complex-type" 
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!-- data type definitions........ -->
+  <!-- 复杂类型定义 -->
+  <xs:element name='user' type='userInfo'></xs:element>
+
+  <xs:complexType name='userInfo'>
+    <xs:sequence>
+      <xs:element name='id' type='xs:string'></xs:element>
+      <xs:element name="name" type="xs:string"></xs:element>
+      <!-- <xs:element name="email" type="xs:string"></xs:element> -->
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- definition of the data being communicated.... -->
+  <!-- 方法，输入和输出定义 -->
+  <message name='GetUserByIdInput'>
+    <part name='id' type='xs:string'></part>
+  </message>
+
+  <message name="GetUserByIdOutput">
+    <part name='user' type='userInfo'></part>
+  </message>
+
+  <portType name="ServicePortType">
+    <!-- set of operations...... -->
+    <operation name="getUserById">
+      <input message="GetUserByIdInput"/>
+      <output message="GetUserByIdOutput"></output>
+    </operation>
+  </portType>
+
+  <binding name="ServiceSoapBinding" type="ServicePortType">
+    <!-- protocol and data format specification.... -->
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+    <operation name="getUserById">
+      <!-- https://stackoverflow.com/questions/55094846/soapoperation-seems-useless-in-binding-tag -->
+      <!-- <soap:operation soapAction="getUserById"/>
+      <input message="GetUserByIdInput">
+        <soap:body use="literal"/>
+      </input>
+      <output message="GetUserByIdOutput">
+        <soap:body parts="user" use="literal"/>
+      </output> -->
+    </operation>
+  </binding>
+
+  <service name="UserService">
+    <documentation>Complex type service</documentation>
+    <port name="ServicePort" binding="ServiceSoapBinding">
+      <soap:address location="http://localhost:8001/complex-type"/>
+    </port>
+  </service>
+
+</definitions>
+
+
+
+
