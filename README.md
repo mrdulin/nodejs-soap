@@ -1,6 +1,6 @@
 # nodejs-soap
 
-Learning soap, wsdl, node.js
+Learning Soap, WSDL with Node.js
 
 ## TODO
 

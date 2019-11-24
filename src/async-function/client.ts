@@ -9,15 +9,15 @@ soap
   .createClientAsync(url)
   .then((client: any) => {
     const args = { id: faker.random.uuid() };
-    return client.getUserByIdAsync(args).then(getUserByIdAsyncResult => [client, getUserByIdAsyncResult]);
+    return client.getUserByIdAsync(args).then((getUserByIdAsyncResult) => [client, getUserByIdAsyncResult]);
   })
 
   .then(([client, getUserByIdAsyncResult]) => {
     console.log('getUserByIdAsync: ', getUserByIdAsyncResult);
     const args = { email: faker.internet.email() };
-    return client.getUserByEmailAsync(args).then(getUserByEmailAsyncResult => [client, getUserByEmailAsyncResult]);
+    return client.getUserByEmailAsync(args).then((getUserByEmailAsyncResult) => [client, getUserByEmailAsyncResult]);
   })
   .then(([client, getUserByEmailAsyncResult]) => {
     console.log('getUserByEmailAsyncResult: ', getUserByEmailAsyncResult);
   })
-  .catch(error => console.error(error.message));
+  .catch((error) => console.error(error.message));

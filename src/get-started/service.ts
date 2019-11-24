@@ -7,9 +7,9 @@ const service = {
       getUserById(args) {
         const user = { id: args.id, name: faker.name.findName(), email: faker.internet.email() };
         return user;
-      }
-    }
-  }
+      },
+    },
+  },
 };
 
 const wsdl = readWSDL('get-started.wsdl');

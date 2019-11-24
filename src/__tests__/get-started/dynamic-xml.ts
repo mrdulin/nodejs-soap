@@ -10,15 +10,15 @@ const xml = {
       'soap:Envelope': {
         $: {
           'xmlns:soap': 'http://schemas.xmlsoap.org/soap/envelope/',
-          'xmlns:tns': `http://${config.HOST}:${config.PORT}/get-started/service.wsdl`
+          'xmlns:tns': `http://${config.HOST}:${config.PORT}/get-started/service.wsdl`,
         },
         'soap:Body': {
-          'tns:getUserById': { id }
-        }
-      }
+          'tns:getUserById': { id },
+        },
+      },
     };
     return builder.buildObject(args);
-  }
+  },
 };
 
 export { xml as dynamicXML };

@@ -11,7 +11,7 @@ soap
     const args = { id: faker.random.uuid() };
     return client.getUserByIdAsync(args);
   })
-  .then(getUserByIdAsyncResult => {
+  .then((getUserByIdAsyncResult) => {
     console.log('getUserByIdAsyncResult: ', getUserByIdAsyncResult);
   })
-  .catch(error => console.error(error.message));
+  .catch((error) => console.error(error.message));

@@ -19,9 +19,9 @@ const service = {
         //     resolve(user);
         //   }, 1000);
         // });
-      }
-    }
-  }
+      },
+    },
+  },
 };
 
 const wsdl = readWSDL('get-started.wsdl');

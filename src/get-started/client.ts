@@ -43,7 +43,7 @@ soap.createClient(url, (createClientError, client: soap.Client) => {
     const args = { id: faker.random.uuid() };
     (client as any)
       .getUserByIdAsync(args)
-      .then(result => {
+      .then((result) => {
         console.log('getUserByIdAsync: ', result);
       })
       .catch(console.error);

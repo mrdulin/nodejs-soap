@@ -32,8 +32,8 @@ describe('get-started', () => {
       headers: {
         'Content-Type': 'text/xml;charset=utf-8',
         'Accept-Encoding': 'gzip,deflate',
-        'Content-Length': xml.length
-      }
+        'Content-Length': xml.length,
+      },
     };
 
     const rawXml = await request(options);
@@ -57,8 +57,8 @@ describe('get-started', () => {
       headers: {
         'Content-Type': 'text/xml;charset=utf-8',
         'Accept-Encoding': 'gzip,deflate',
-        'Content-Length': xml.length
-      }
+        'Content-Length': xml.length,
+      },
     };
 
     const rawXml = await request(options);
